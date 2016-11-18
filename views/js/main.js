@@ -357,7 +357,7 @@ var pizzaElementGenerator = function(i) {
   pizzaContainer.style.width = "33.33%";
   pizzaContainer.style.height = "325px";
   pizzaContainer.id = "pizza" + i;                // gives each pizza element a unique id
-  pizzaImageContainer.classList.add("col-md-6");
+  pizzaImageContainer.style.width="35%";
 
   pizzaImage.src = "images/pizza.png";
   pizzaImage.classList.add("img-responsive");
@@ -365,7 +365,7 @@ var pizzaElementGenerator = function(i) {
   pizzaContainer.appendChild(pizzaImageContainer);
 
 
-  pizzaDescriptionContainer.classList.add("col-md-6");
+  pizzaDescriptionContainer.style.width="65%";
 
   pizzaName = document.createElement("h4");
   pizzaName.innerHTML = randomName();
@@ -404,16 +404,16 @@ var resizePizzas = function(size) {
 
     // Removed the dx function which was above and using percetages in sizeSwitcher below instead
     // Changes the slider value to a percent width
-    function changePizzaSizes (size) {
-      switch(size) {
-        case "1":
-          newWidth = 25;
+    function changePizzaSizes(size) {
+    switch(size) {
+      case "1": 
+        newWidth = 25; 
         break; 
-        case "2":
-          newWidth = 33.3;        
-          break; 
-        case "3":
-          newWidth = 50;
+      case "2":
+        newWidth = 33.3; 
+        break;
+      case "3": 
+        newWidth = 50; 
           break; 
         default:
           console.log("bug in sizeSwitcher");
