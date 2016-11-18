@@ -35,8 +35,20 @@
       </div>
     </div>
     <div id="callToAction" class="row">
-      <div class="col-md-4">
-        <img src="images/pizzeria.jpg" class="img-responsive"> <!-- Image credit to: http://commons.wikimedia.org/wiki/File:HK_TST_night_%E5%98%89%E8%98%AD%E9%81%93_Granville_Road_restaurant_Paisano's_Pizzeria_pizza_Dec-2013.JPG -->
+ <div class="col-md-4">
+        <picture>
+          <!-- Used image source to get the browser to load certain images dependent on browser size-->
+            <source 
+              media="(min-width: 990px)"
+              srcset="images/pizzeria_side_small.jpg">
+            <source 
+              media="(min-width: 480px)"
+              srcset="images/pizzeria_big.jpg">
+            <img 
+                src="images/pizzeria_med.jpg"  
+              class="img-responsive">
+              <!-- Image credit to: http://commons.wikimedia.org/wiki/File:HK_TST_night_%E5%98%89%E8%98%AD%E9%81%93_Granville_Road_restaurant_Paisano's_Pizzeria_pizza_Dec-2013.JPG -->
+        </picture>
       </div>
       <div class="col-md-8">
         <div class="row">
